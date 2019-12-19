@@ -54,18 +54,60 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            new ListTile(
-                title: new InkWell(
-                  child: new Text("Page One"),
-                ),
-                trailing: new Icon(Icons.arrow_upward),
-                onTap: () {
-                  Navigator.of(context).pop();
-                  Navigator.of(context).push(new MaterialPageRoute(
 
-                      builder: (BuildContext context) =>
-                          new NewPage("Page One")));
-                }),
+            new ExpansionTile(title: new Text("Dropdown"),
+            children: <Widget>[
+              new ListTile(
+                  title: new InkWell(
+                    child: new Text("Page One",
+                    style: new TextStyle(
+                      color: Colors.grey,
+                      fontSize: 15.0
+                    ),),
+                  ),
+                  trailing: new Icon(Icons.home),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+
+                        builder: (BuildContext context) =>
+                        new NewPage("Page One")));
+                  }),
+              new ListTile(
+                  title: new InkWell(
+                    child: new Text("Page One",
+                      style: new TextStyle(
+                          color: Colors.grey,
+                          fontSize: 15.0
+                      ),),
+                  ),
+                  trailing: new Icon(Icons.dashboard),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+
+                        builder: (BuildContext context) =>
+                        new NewPage("Page One")));
+                  }),
+              new ListTile(
+                  title: new InkWell(
+                    child: new Text("Page One",
+                      style: new TextStyle(
+                          color: Colors.grey,
+                          fontSize: 15.0
+                      ),),
+                  ),
+                  trailing: new Icon(Icons.add_location),
+                  onTap: () {
+                    Navigator.of(context).pop();
+                    Navigator.of(context).push(new MaterialPageRoute(
+
+                        builder: (BuildContext context) =>
+                        new NewPage("Page One")));
+                  }),
+
+            ],),
+
             new ListTile(
                 title: new InkWell(
                   child: new Text("Page Two"),
